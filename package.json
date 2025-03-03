@@ -10,6 +10,7 @@
     "uuid": "24bad3f6-82bc-4db3-bed7-9c58343637e5"
   },
   "dependencies": {
+    "nr1": "^0.1.0",
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",

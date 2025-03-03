@@ -51,9 +51,9 @@ const App = () => {
         <TableHeader>
           <TableHeaderCell>Date</TableHeaderCell>
           {accountIdList.map((accountIdListElement) => (
-            <TableHeaderCell key={accountIdListElement.entityGuid}>
-              {accountIdListElement.entityName ||
-                accountIdListElement.entityGuid}
+            <TableHeaderCell key={accountIdListElement.entityGuid}            >
+              <a href={"https://one.eu.newrelic.com/nr1-core/service-levels-management/summary/" + accountIdListElement.entityGuid} target="_blank">{accountIdListElement.entityName ||
+                accountIdListElement.entityGuid}</a>
             </TableHeaderCell>
           ))}
         </TableHeader>
@@ -71,13 +71,14 @@ const App = () => {
                   style={
                     color
                       ? {
-                          backgroundColor: color,
-                          color: color === "red" ? "white" : "black",
+                          //backgroundColor: color,
+                          //color: color === "red" ? "white" : "black",
+                          color: color,
                         }
                       : {}
                   }
                 >
-                  {value}
+                  {value.toFixed(2)}
                 </TableRowCell>
               );
             })}
